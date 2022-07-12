@@ -29,7 +29,7 @@ class App extends React.Component {
   render() {    
     return (
       <>
-      
+      <div className=''>
       <Counter
       count = {this.state.count}
       increment = {this.handlePlus}
@@ -37,7 +37,17 @@ class App extends React.Component {
       
       />
 
+     <Counter
+      count = {this.state.count}
+      increment = {this.handlePlus}
+      substract = {this.handleMinus}
+      
+      />
+      </div>
+      
+
       </>
+      
     )
   }  
 }
