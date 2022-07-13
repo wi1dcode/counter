@@ -6,8 +6,10 @@ class App extends React.Component {
     super()
 
     this.state = {
-      count: 0
+      count: 0,
+      countBis: 1
     }
+    
   }
 
 
@@ -21,7 +23,33 @@ class App extends React.Component {
   }
 
   handlePlus = () => {
-    this.setState({ count: this.state.count + 1 })
+    if (this.state.countBis < 99) {
+      this.setState({ count: this.state.count + 1 })
+    }
+
+    if (this.state.count === this.state.countBis - 1) {
+      this.setState({ countBis: this.state.countBis + 1 })
+    }
+  }
+
+
+
+  handleMinusTwo = () => {
+    this.setState({ countBis: this.state.countBis - 1 })
+    if (this.state.countBis <= 1) {
+      this.setState({ countBis: 1 })
+    }
+    if (this.state.countBis -1 === this.state.count) {
+      this.setState({ count: this.state.count - 1 })
+    }
+  }
+
+  handlePlusTwo = () => {
+    if (this.state.countBis < 100) {
+      this.setState({
+        countBis: this.state.countBis + 1
+      })
+    }
   }
 
 
@@ -38,9 +66,9 @@ class App extends React.Component {
       />
 
      <Counter
-      count = {this.state.count}
-      increment = {this.handlePlus}
-      substract = {this.handleMinus}
+      count = {this.state.countBis}
+      increment = {this.handlePlusTwo}
+      substract = {this.handleMinusTwo}
       
       />
       </div>
