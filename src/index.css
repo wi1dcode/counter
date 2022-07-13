@@ -27,18 +27,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
- 
+  margin-right: 45px
 }
 
-.countertwo {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  border-radius: 25px;
-  width: 500px;
-  height: 400px;
-  color: wheat;
+.containers {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  
+  justify-content: center;
+  margin-top: 15%;
+  padding-right: 5px;
 }

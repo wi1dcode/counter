@@ -29,7 +29,7 @@ class App extends React.Component {
   render() {    
     return (
       <>
-      <div className=''>
+      <div className='containers'>
       <Counter
       count = {this.state.count}
       increment = {this.handlePlus}
